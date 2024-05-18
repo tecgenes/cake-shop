@@ -1,5 +1,6 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:cake_shop/config/router/app_router.gr.dart';
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 
 @RoutePage()
@@ -23,11 +24,11 @@ class LandingPage extends StatelessWidget {
               bottomNavigationBar: BottomNavigationBar(
                 currentIndex: tabsRouter.activeIndex,
                 onTap: (value) => tabsRouter.setActiveIndex(value),
-                items: const [
-                  BottomNavigationBarItem(icon: Icon(Icons.home), label: "Home"),
-                  BottomNavigationBarItem(icon: Icon(Icons.music_note), label: "Browse"),
-                  BottomNavigationBarItem(icon: Icon(Icons.settings), label: "Design"),
-                  BottomNavigationBarItem(icon: Icon(Icons.person), label: "Account"),
+                items:  [
+                  BottomNavigationBarItem(icon: const Icon(Icons.home), label: 'home.home'.tr()),
+                  BottomNavigationBarItem(icon: const Icon(Icons.music_note), label: 'browse.browse'.tr()),
+                  BottomNavigationBarItem(icon: const Icon(Icons.settings), label: 'design.design'.tr()),
+                  BottomNavigationBarItem(icon: const Icon(Icons.person), label: 'account.account'.tr()),
                 ],
               ),
             )

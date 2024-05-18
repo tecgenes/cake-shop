@@ -1,5 +1,6 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:cake_shop/config/router/app_router.gr.dart';
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 
 @RoutePage()
@@ -22,10 +23,19 @@ class AccountPage extends StatelessWidget {
                   child: const Text("User Orders Page"),
                 ),
                 ElevatedButton(
-                  onPressed: () => context.router.push(const UserProfileRoute()),
+                  onPressed: () =>
+                      context.router.push(const UserProfileRoute()),
                   child: const Text("User Profile Page"),
                 ),
               ],
+            ),
+            ElevatedButton(
+              onPressed: () {
+                context.locale == const Locale('en')
+                    ? context.setLocale(context.supportedLocales[0])
+                    : context.setLocale(context.supportedLocales[1]);
+              },
+              child: const Text("Change Language"),
             ),
           ],
         ),
