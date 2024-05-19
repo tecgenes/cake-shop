@@ -2,6 +2,7 @@ import 'package:auto_route/auto_route.dart';
 import 'package:cake_shop/config/router/app_router.gr.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
+import 'package:iconsax/iconsax.dart';
 
 @RoutePage()
 class LandingPage extends StatelessWidget {
@@ -25,10 +26,10 @@ class LandingPage extends StatelessWidget {
                 currentIndex: tabsRouter.activeIndex,
                 onTap: (value) => tabsRouter.setActiveIndex(value),
                 items:  [
-                  BottomNavigationBarItem(icon: const Icon(Icons.home), label: 'home.home'.tr()),
-                  BottomNavigationBarItem(icon: const Icon(Icons.music_note), label: 'browse.browse'.tr()),
-                  BottomNavigationBarItem(icon: const Icon(Icons.settings), label: 'design.design'.tr()),
-                  BottomNavigationBarItem(icon: const Icon(Icons.person), label: 'account.account'.tr()),
+                  BottomNavigationBarItem(icon: const Icon(Iconsax.home), label: 'home.home'.tr()),
+                  BottomNavigationBarItem(icon: const Icon(Iconsax.shop), label: 'browse.browse'.tr()),
+                  BottomNavigationBarItem(icon: const Icon(Iconsax.designtools), label: 'design.design'.tr()),
+                  BottomNavigationBarItem(icon: const Icon(Iconsax.personalcard), label: 'account.account'.tr()),
                 ],
               ),
             )
