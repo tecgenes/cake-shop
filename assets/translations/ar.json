@@ -1,0 +1,18 @@
+{
+  "home": {
+    "home" : "الرئيسية",
+    "home_page" : "الصفحة الرئيسية"
+  },
+  "browse" : {
+    "browse" : "التصفح",
+    "browse_page" : "صفحة التصفح"
+  },
+  "design" : {
+    "design" : "التصميم",
+    "design_page" : "صفحة التصميم"
+  },
+  "account" : {
+    "account" : "الحساب",
+    "account_page" : "صفحة الحساب"
+  }
+}

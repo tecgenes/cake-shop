@@ -1,0 +1,18 @@
+{
+  "home": {
+    "home" : "Home",
+    "home_page" : "Home Page"
+  },
+  "browse" : {
+    "browse" : "Browse",
+    "browse_page" : "Browse Page"
+  },
+  "design" : {
+    "design" : "Design",
+    "design_page" : "Design Page"
+  },
+  "account" : {
+    "account" : "Account",
+    "account_page" : "Account Page"
+  }
+}
