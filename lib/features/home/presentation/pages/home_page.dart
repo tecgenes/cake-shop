@@ -37,6 +37,11 @@ class HomePage extends StatelessWidget {
               onPressed: () => context.router.push(const LocationRoute()),
               child: const Text("Location Page"),
             ),
+
+            ElevatedButton(
+              onPressed: () => context.router.push(const LoginRoute()),
+              child: const Text("Login Page"),
+            ),
           ],
         ),
       ),

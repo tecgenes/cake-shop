@@ -1,4 +1,25 @@
 {
+  "login" : {
+    "login" : "دخول.",
+    "email" : "البريد الإلكتروني",
+    "password" : "كلمة المرور",
+    "forget_password" : "نسيت كلمة المرور ؟",
+    "dont_have_account" : "ليس لديك حساب ؟ ",
+    "continue_google" : "إستمر بإستخدام جوجل"
+  },
+  "register" : {
+    "register" : "تسجيل",
+    "first_name" : "الأسم الأول",
+    "last_name" : "إسم العائلة",
+    "mobile" : "رقم الهاتف",
+    "have_account" : "لدي حساب قائم ؟ "
+  },
+  "reset_password" : {
+    "reset_password" : "إعادة تعيين كلمة المرور",
+    "reset" : "إعادة تعيين",
+    "remember_my_password" : "لقد تذكرت كلمة المرور ? "
+
+  },
   "home": {
     "home" : "الرئيسية",
     "home_page" : "الصفحة الرئيسية"
