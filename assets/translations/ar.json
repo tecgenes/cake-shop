@@ -35,5 +35,11 @@
   "account" : {
     "account" : "الحساب",
     "account_page" : "صفحة الحساب"
+  },
+  "alert" : {
+    "exit_alert" : "إغلاق التطبيق",
+    "exit_description" : "هل أنت متأكد، هل تريد إغلاق التطبيق؟",
+    "exit" : "إغلاق",
+    "cancel" : "إلغاء"
   }
 }

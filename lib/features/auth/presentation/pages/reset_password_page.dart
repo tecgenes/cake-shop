@@ -1,5 +1,4 @@
 import 'package:auto_route/auto_route.dart';
-import 'package:cake_shop/config/router/app_router.gr.dart';
 import 'package:cake_shop/features/auth/presentation/widgets/auth_button.dart';
 import 'package:cake_shop/features/auth/presentation/widgets/auth_field.dart';
 import 'package:easy_localization/easy_localization.dart';

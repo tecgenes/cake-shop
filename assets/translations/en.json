@@ -35,5 +35,11 @@
   "account" : {
     "account" : "Account",
     "account_page" : "Account Page"
+  },
+  "alert" : {
+    "exit_alert" : "Close App",
+    "exit_description" : "Are you sure, do you want to close the application?",
+    "exit" : "Exit",
+    "cancel" : "Cancel"
   }
 }
