@@ -1,10 +1,10 @@
-import 'package:cake_shop/config/contracts/usecase.dart';
-import 'package:cake_shop/config/errors/failures.dart';
+import 'package:cake_shop/core/contracts/usecase.dart';
+import 'package:cake_shop/core/errors/failures.dart';
 import 'package:cake_shop/features/auth/domain/entities/user_entity.dart';
 import 'package:cake_shop/features/auth/domain/repositories/auth_repository_interface.dart';
 import 'package:fpdart/fpdart.dart';
 
-class CurrentUserUsecase implements Usecase<UserEntity, NoParams>{
+class CurrentUserUsecase implements Usecase<UserEntity, NeedlessDTO>{
   final AuthRepositoryInterface authRepository;
   CurrentUserUsecase(this.authRepository);
 

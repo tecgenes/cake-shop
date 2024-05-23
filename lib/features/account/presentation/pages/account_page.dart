@@ -1,5 +1,5 @@
 import 'package:auto_route/auto_route.dart';
-import 'package:cake_shop/config/router/app_router.gr.dart';
+import 'package:cake_shop/core/router/app_router.gr.dart';
 import 'package:cake_shop/features/account/presentation/manager/theme/theme_mode_cubit.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';

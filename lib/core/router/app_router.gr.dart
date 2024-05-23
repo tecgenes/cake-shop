@@ -14,7 +14,7 @@ import 'package:cake_shop/features/account/presentation/account_navigation.dart'
 import 'package:cake_shop/features/account/presentation/pages/account_page.dart'
     as _i2;
 import 'package:cake_shop/features/auth/presentation/pages/login_page.dart'
-    as _i13;
+    as _i12;
 import 'package:cake_shop/features/auth/presentation/pages/register_page.dart'
     as _i17;
 import 'package:cake_shop/features/auth/presentation/pages/reset_password_page.dart'
@@ -23,27 +23,25 @@ import 'package:cake_shop/features/browse/presentation/browse_navigation.dart'
     as _i3;
 import 'package:cake_shop/features/browse/presentation/pages/browse_page.dart'
     as _i4;
-import 'package:cake_shop/features/cake_detail/presentation/pages/cake_detail_page.dart'
-    as _i5;
 import 'package:cake_shop/features/category/presentation/pages/category_page.dart'
-    as _i6;
+    as _i5;
 import 'package:cake_shop/features/design/presentation/design_navigation.dart'
-    as _i7;
+    as _i6;
 import 'package:cake_shop/features/design/presentation/pages/design_page.dart'
-    as _i8;
+    as _i7;
 import 'package:cake_shop/features/home/presentation/home_navigation.dart'
-    as _i9;
+    as _i8;
 import 'package:cake_shop/features/home/presentation/pages/home_page.dart'
-    as _i10;
-import 'package:cake_shop/features/landing/presentation/pages/landing_page.dart'
-    as _i11;
+    as _i9;
 import 'package:cake_shop/features/location/presentation/pages/location_page.dart'
-    as _i12;
+    as _i11;
 import 'package:cake_shop/features/offer/presentation/pages/offer_page.dart'
-    as _i14;
+    as _i13;
 import 'package:cake_shop/features/order_detail/presentation/pages/order_detail_page.dart'
-    as _i15;
+    as _i14;
 import 'package:cake_shop/features/place_order/presentation/pages/place_order_page.dart'
+    as _i15;
+import 'package:cake_shop/features/product_detail/presentation/pages/product_detail_page.dart'
     as _i16;
 import 'package:cake_shop/features/user_orders/presentation/pages/user_orders_page.dart'
     as _i20;
@@ -51,6 +49,7 @@ import 'package:cake_shop/features/user_orders/presentation/user_orders_navigati
     as _i19;
 import 'package:cake_shop/features/user_profile/presentation/pages/user_profile_page.dart'
     as _i21;
+import 'package:cake_shop/landing_page.dart' as _i10;
 
 abstract class $AppRouter extends _i22.RootStackRouter {
   $AppRouter({super.navigatorKey});
@@ -81,76 +80,76 @@ abstract class $AppRouter extends _i22.RootStackRouter {
         child: const _i4.BrowsePage(),
       );
     },
-    CakeDetailRoute.name: (routeData) {
-      return _i22.AutoRoutePage<dynamic>(
-        routeData: routeData,
-        child: const _i5.CakeDetailPage(),
-      );
-    },
     CategoryRoute.name: (routeData) {
       return _i22.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const _i6.CategoryPage(),
+        child: const _i5.CategoryPage(),
       );
     },
     DesignNavigation.name: (routeData) {
       return _i22.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const _i7.DesignNavigation(),
+        child: const _i6.DesignNavigation(),
       );
     },
     DesignRoute.name: (routeData) {
       return _i22.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const _i8.DesignPage(),
+        child: const _i7.DesignPage(),
       );
     },
     HomeNavigation.name: (routeData) {
       return _i22.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const _i9.HomeNavigation(),
+        child: const _i8.HomeNavigation(),
       );
     },
     HomeRoute.name: (routeData) {
       return _i22.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const _i10.HomePage(),
+        child: const _i9.HomePage(),
       );
     },
     LandingRoute.name: (routeData) {
       return _i22.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const _i11.LandingPage(),
+        child: const _i10.LandingPage(),
       );
     },
     LocationRoute.name: (routeData) {
       return _i22.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const _i12.LocationPage(),
+        child: const _i11.LocationPage(),
       );
     },
     LoginRoute.name: (routeData) {
       return _i22.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const _i13.LoginPage(),
+        child: const _i12.LoginPage(),
       );
     },
     OfferRoute.name: (routeData) {
       return _i22.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const _i14.OfferPage(),
+        child: const _i13.OfferPage(),
       );
     },
     OrderDetailRoute.name: (routeData) {
       return _i22.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const _i15.OrderDetailPage(),
+        child: const _i14.OrderDetailPage(),
       );
     },
     PlaceOrderRoute.name: (routeData) {
       return _i22.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const _i16.PlaceOrderPage(),
+        child: const _i15.PlaceOrderPage(),
+      );
+    },
+    ProductDetailRoute.name: (routeData) {
+      return _i22.AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const _i16.ProductDetailPage(),
       );
     },
     RegisterRoute.name: (routeData) {
@@ -243,21 +242,7 @@ class BrowseRoute extends _i22.PageRouteInfo<void> {
 }
 
 /// generated route for
-/// [_i5.CakeDetailPage]
-class CakeDetailRoute extends _i22.PageRouteInfo<void> {
-  const CakeDetailRoute({List<_i22.PageRouteInfo>? children})
-      : super(
-          CakeDetailRoute.name,
-          initialChildren: children,
-        );
-
-  static const String name = 'CakeDetailRoute';
-
-  static const _i22.PageInfo<void> page = _i22.PageInfo<void>(name);
-}
-
-/// generated route for
-/// [_i6.CategoryPage]
+/// [_i5.CategoryPage]
 class CategoryRoute extends _i22.PageRouteInfo<void> {
   const CategoryRoute({List<_i22.PageRouteInfo>? children})
       : super(
@@ -271,7 +256,7 @@ class CategoryRoute extends _i22.PageRouteInfo<void> {
 }
 
 /// generated route for
-/// [_i7.DesignNavigation]
+/// [_i6.DesignNavigation]
 class DesignNavigation extends _i22.PageRouteInfo<void> {
   const DesignNavigation({List<_i22.PageRouteInfo>? children})
       : super(
@@ -285,7 +270,7 @@ class DesignNavigation extends _i22.PageRouteInfo<void> {
 }
 
 /// generated route for
-/// [_i8.DesignPage]
+/// [_i7.DesignPage]
 class DesignRoute extends _i22.PageRouteInfo<void> {
   const DesignRoute({List<_i22.PageRouteInfo>? children})
       : super(
@@ -299,7 +284,7 @@ class DesignRoute extends _i22.PageRouteInfo<void> {
 }
 
 /// generated route for
-/// [_i9.HomeNavigation]
+/// [_i8.HomeNavigation]
 class HomeNavigation extends _i22.PageRouteInfo<void> {
   const HomeNavigation({List<_i22.PageRouteInfo>? children})
       : super(
@@ -313,7 +298,7 @@ class HomeNavigation extends _i22.PageRouteInfo<void> {
 }
 
 /// generated route for
-/// [_i10.HomePage]
+/// [_i9.HomePage]
 class HomeRoute extends _i22.PageRouteInfo<void> {
   const HomeRoute({List<_i22.PageRouteInfo>? children})
       : super(
@@ -327,7 +312,7 @@ class HomeRoute extends _i22.PageRouteInfo<void> {
 }
 
 /// generated route for
-/// [_i11.LandingPage]
+/// [_i10.LandingPage]
 class LandingRoute extends _i22.PageRouteInfo<void> {
   const LandingRoute({List<_i22.PageRouteInfo>? children})
       : super(
@@ -341,7 +326,7 @@ class LandingRoute extends _i22.PageRouteInfo<void> {
 }
 
 /// generated route for
-/// [_i12.LocationPage]
+/// [_i11.LocationPage]
 class LocationRoute extends _i22.PageRouteInfo<void> {
   const LocationRoute({List<_i22.PageRouteInfo>? children})
       : super(
@@ -355,7 +340,7 @@ class LocationRoute extends _i22.PageRouteInfo<void> {
 }
 
 /// generated route for
-/// [_i13.LoginPage]
+/// [_i12.LoginPage]
 class LoginRoute extends _i22.PageRouteInfo<void> {
   const LoginRoute({List<_i22.PageRouteInfo>? children})
       : super(
@@ -369,7 +354,7 @@ class LoginRoute extends _i22.PageRouteInfo<void> {
 }
 
 /// generated route for
-/// [_i14.OfferPage]
+/// [_i13.OfferPage]
 class OfferRoute extends _i22.PageRouteInfo<void> {
   const OfferRoute({List<_i22.PageRouteInfo>? children})
       : super(
@@ -383,7 +368,7 @@ class OfferRoute extends _i22.PageRouteInfo<void> {
 }
 
 /// generated route for
-/// [_i15.OrderDetailPage]
+/// [_i14.OrderDetailPage]
 class OrderDetailRoute extends _i22.PageRouteInfo<void> {
   const OrderDetailRoute({List<_i22.PageRouteInfo>? children})
       : super(
@@ -397,7 +382,7 @@ class OrderDetailRoute extends _i22.PageRouteInfo<void> {
 }
 
 /// generated route for
-/// [_i16.PlaceOrderPage]
+/// [_i15.PlaceOrderPage]
 class PlaceOrderRoute extends _i22.PageRouteInfo<void> {
   const PlaceOrderRoute({List<_i22.PageRouteInfo>? children})
       : super(
@@ -406,6 +391,20 @@ class PlaceOrderRoute extends _i22.PageRouteInfo<void> {
         );
 
   static const String name = 'PlaceOrderRoute';
+
+  static const _i22.PageInfo<void> page = _i22.PageInfo<void>(name);
+}
+
+/// generated route for
+/// [_i16.ProductDetailPage]
+class ProductDetailRoute extends _i22.PageRouteInfo<void> {
+  const ProductDetailRoute({List<_i22.PageRouteInfo>? children})
+      : super(
+          ProductDetailRoute.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'ProductDetailRoute';
 
   static const _i22.PageInfo<void> page = _i22.PageInfo<void>(name);
 }

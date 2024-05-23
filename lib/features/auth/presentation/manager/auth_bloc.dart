@@ -1,4 +1,6 @@
-import 'package:cake_shop/config/contracts/usecase.dart';
+import 'package:cake_shop/core/contracts/usecase.dart';
+import 'package:cake_shop/core/dtos/user_login_dto.dart';
+import 'package:cake_shop/core/dtos/user_register_dto.dart';
 import 'package:cake_shop/features/auth/domain/entities/user_entity.dart';
 import 'package:cake_shop/features/auth/domain/use_cases/current_user_usecase.dart';
 import 'package:cake_shop/features/auth/domain/use_cases/user_login_usecase.dart';
@@ -28,7 +30,7 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
   void _onAuthRegister(AuthRegisterEvent event, Emitter<AuthState> emit) async {
     emit(AuthLoading());
     final response = await _userRegisterUsecase(
-      UserRegisterParams(
+      UserRegisterDTO(
         firstName: event.firstName,
         lastName: event.lastName,
         mobile: event.mobile,
@@ -44,12 +46,10 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
 
   void _onAuthLogin(AuthLoginEvent event, Emitter<AuthState> emit) async {
     emit(AuthLoading());
-    final response = await _userLoginUsecase(
-      UserLoginParams(
-        email: event.email,
-        password: event.password,
-      ),
-    );
+    final response = await _userLoginUsecase(UserLoginDTO(
+      email: event.email,
+      password: event.password,
+    ));
     response.fold(
       (failure) => emit(AuthFailure(failure.message)),
       (user) => emit(AuthSuccess(user)),
@@ -58,7 +58,7 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
 
   void _isUserLoggedIn(
       AuthUserIsLoggedInEvent event, Emitter<AuthState> emit) async {
-    final response = await _currentUserUsecase(NoParams());
+    final response = await _currentUserUsecase(NeedlessDTO());
     response.fold(
       (failure) => emit(AuthFailure(failure.message)),
       (user) => emit(AuthSuccess(user)),

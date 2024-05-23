@@ -1,4 +1,4 @@
-import 'package:cake_shop/config/errors/failures.dart';
+import 'package:cake_shop/core/errors/failures.dart';
 import 'package:cake_shop/features/auth/domain/entities/user_entity.dart';
 import 'package:fpdart/fpdart.dart';
 
