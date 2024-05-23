@@ -1,4 +1,4 @@
-import 'package:cake_shop/config/injectable/dependencies.dart';
+import 'package:cake_shop/core/dependencies/dependencies.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -20,14 +20,14 @@ class ThemeModeCubit extends Cubit<ThemeMode> {
   // Method to save theme mode locally
   void _saveThemeMode() async {
     // SharedPreferences prefs = await SharedPreferences.getInstance();
-    inject.getAsync<SharedPreferences>().then((prefs){
+    dependency.getAsync<SharedPreferences>().then((prefs){
       prefs.setBool('isDarkMode', state == ThemeMode.dark);
     });
   }
 
   // Method to load theme mode locally
   void _loadThemeMode() async {
-    inject.getAsync<SharedPreferences>().then((prefs){
+    dependency.getAsync<SharedPreferences>().then((prefs){
       bool isDarkMode = prefs.getBool('isDarkMode') ?? false;
       emit(isDarkMode ? ThemeMode.dark : ThemeMode.light);
     });

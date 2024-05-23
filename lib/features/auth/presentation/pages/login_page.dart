@@ -1,7 +1,7 @@
 import 'package:auto_route/auto_route.dart';
-import 'package:cake_shop/config/common/widgets/loader.dart';
-import 'package:cake_shop/config/router/app_router.gr.dart';
-import 'package:cake_shop/config/utils/show_snackbar.dart';
+import 'package:cake_shop/core/common/widgets/loader.dart';
+import 'package:cake_shop/core/router/app_router.gr.dart';
+import 'package:cake_shop/core/utils/show_snackbar.dart';
 import 'package:cake_shop/features/auth/presentation/manager/auth_bloc.dart';
 import 'package:cake_shop/features/auth/presentation/widgets/auth_button.dart';
 import 'package:cake_shop/features/auth/presentation/widgets/auth_field.dart';

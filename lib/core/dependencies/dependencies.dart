@@ -1,4 +1,5 @@
-import 'package:cake_shop/config/router/app_router.dart';
+import 'package:cake_shop/core/contracts/auth_remote_datasource.dart';
+import 'package:cake_shop/core/router/app_router.dart';
 import 'package:cake_shop/features/auth/data/data_sources/auth_remote_datasource.dart';
 import 'package:cake_shop/features/auth/data/repositories/auth_repository.dart';
 import 'package:cake_shop/features/auth/domain/repositories/auth_repository_interface.dart';
@@ -12,40 +13,42 @@ import 'package:get_it/get_it.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 
-final inject = GetIt.instance;
-Future<void> init() async {
+final dependency = GetIt.instance;
+Future<void> initialize() async {
+  // environment variables  /////////////////////////////
   await dotenv.load(fileName: ".env");
+  // Supabase Initialization  /////////////////////////////
   final supabase = await Supabase.initialize(
     url: dotenv.env['SUPABASE_URL']!,
     anonKey: dotenv.env['SUPABASE_ANON_KEY']!,
   );
   // Supabase Client  /////////////////////////////
-  inject.registerLazySingleton(() => supabase.client);
+  dependency.registerLazySingleton(() => supabase.client);
   // Localization       ///////////////////////////////
-  inject.registerFactory(() => EasyLocalization.ensureInitialized());
+  dependency.registerFactory(() => EasyLocalization.ensureInitialized());
   // Routes        ///////////////////////////////
-  inject.registerFactory(() => AppRouter());
+  dependency.registerFactory(() => AppRouter());
 
-  inject.registerLazySingletonAsync(() => SharedPreferences.getInstance());
+  dependency.registerLazySingletonAsync(() => SharedPreferences.getInstance());
 
   _initAuth();
 }
 
 void _initAuth() {
-  inject
+  dependency
   // Datasources ///////////////////////////////
     ..registerFactory<AuthRemoteDatasourceInterface>(
-            () => AuthSupabaseImplementation(inject()))
+            () => AuthSupabaseImplementation(dependency()))
   // Repositories ///////////////////////////////
-    ..registerFactory<AuthRepositoryInterface>(() => AuthRepository(inject()))
+    ..registerFactory<AuthRepositoryInterface>(() => AuthRepository(dependency()))
   // Usecases     ///////////////////////////////
-    ..registerFactory(() => UserRegisterUsecase(inject()))
-    ..registerFactory(() => UserLoginUsecase(inject()))
-    ..registerFactory(() => CurrentUserUsecase(inject()))
+    ..registerFactory(() => UserRegisterUsecase(dependency()))
+    ..registerFactory(() => UserLoginUsecase(dependency()))
+    ..registerFactory(() => CurrentUserUsecase(dependency()))
   // Blocs        ///////////////////////////////
     ..registerLazySingleton(() => AuthBloc(
-      userRegisterUsecase: inject(),
-      userLoginUsecase: inject(),
-      currentUserUsecase: inject(),
+      userRegisterUsecase: dependency(),
+      userLoginUsecase: dependency(),
+      currentUserUsecase: dependency(),
     ));
 }
