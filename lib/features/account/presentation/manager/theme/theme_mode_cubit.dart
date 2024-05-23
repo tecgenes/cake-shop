@@ -20,14 +20,14 @@ class ThemeModeCubit extends Cubit<ThemeMode> {
   // Method to save theme mode locally
   void _saveThemeMode() async {
     // SharedPreferences prefs = await SharedPreferences.getInstance();
-    Dependencies.inject.getAsync<SharedPreferences>().then((prefs){
+    inject.getAsync<SharedPreferences>().then((prefs){
       prefs.setBool('isDarkMode', state == ThemeMode.dark);
     });
   }
 
   // Method to load theme mode locally
   void _loadThemeMode() async {
-    Dependencies.inject.getAsync<SharedPreferences>().then((prefs){
+    inject.getAsync<SharedPreferences>().then((prefs){
       bool isDarkMode = prefs.getBool('isDarkMode') ?? false;
       emit(isDarkMode ? ThemeMode.dark : ThemeMode.light);
     });
