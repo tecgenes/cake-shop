@@ -1,6 +1,5 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:cake_shop/config/router/app_router.gr.dart';
-import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 
 @RoutePage()
@@ -36,6 +35,11 @@ class HomePage extends StatelessWidget {
             ElevatedButton(
               onPressed: () => context.router.push(const LocationRoute()),
               child: const Text("Location Page"),
+            ),
+
+            ElevatedButton(
+              onPressed: () => context.router.push(const LoginRoute()),
+              child: const Text("Login Page"),
             ),
           ],
         ),

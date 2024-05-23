@@ -10,7 +10,10 @@ import 'app_router.gr.dart';
 class AppRouter extends $AppRouter {
   @override
   List<AutoRoute> get routes => [
-        AutoRoute(page: LandingRoute.page, initial: true, children: [
+        AutoRoute(page: LoginRoute.page),
+        AutoRoute(page: RegisterRoute.page),
+        AutoRoute(page: ResetPasswordRoute.page),
+        AutoRoute(page: LandingRoute.page, initial: true ,children: [
           // Home Page Routes
           homeNavigationRoutes,
           // Browse Page Routes

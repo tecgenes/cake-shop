@@ -1,4 +1,25 @@
 {
+  "login" : {
+    "login" : "Login.",
+    "email" : "Email",
+    "password" : "Password",
+    "forget_password" : "Forget your password ?",
+    "dont_have_account" : "Don\\'t have an account? ",
+    "continue_google" : "Continue with Google"
+  },
+  "register" : {
+      "register" : "Register",
+      "first_name" : "First Name",
+      "last_name" : "Last Name",
+      "email" : "Email",
+      "mobile" : "Mobile",
+      "have_account" : "I have an account ? "
+  },
+  "reset_password" : {
+      "reset_password" : "Reset Password",
+      "reset" : "Reset",
+      "remember_my_password" : "I remembered my password ? "
+  },
   "home": {
     "home" : "Home",
     "home_page" : "Home Page"
@@ -14,5 +35,11 @@
   "account" : {
     "account" : "Account",
     "account_page" : "Account Page"
+  },
+  "alert" : {
+    "exit_alert" : "Close App",
+    "exit_description" : "Are you sure, do you want to close the application?",
+    "exit" : "Exit",
+    "cancel" : "Cancel"
   }
 }

@@ -1,4 +1,3 @@
-import 'package:cake_shop/config/injectable/dependencies.dart';
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
