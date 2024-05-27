@@ -1,4 +1,5 @@
 import 'package:cake_shop/core/contracts/auth_remote_datasource.dart';
+import 'package:cake_shop/core/cubits/current_user/current_user_cubit.dart';
 import 'package:cake_shop/core/router/app_router.dart';
 import 'package:cake_shop/features/auth/data/data_sources/auth_remote_datasource.dart';
 import 'package:cake_shop/features/auth/data/repositories/auth_repository.dart';
@@ -28,7 +29,8 @@ Future<void> initialize() async {
   dependency.registerFactory(() => EasyLocalization.ensureInitialized());
   // Routes        ///////////////////////////////
   dependency.registerFactory(() => AppRouter());
-
+  // Core     ////////////////////////////////////
+  dependency.registerLazySingleton(() => CurrentUserCubit());
   dependency.registerLazySingletonAsync(() => SharedPreferences.getInstance());
 
   _initAuth();
@@ -50,5 +52,6 @@ void _initAuth() {
       userRegisterUsecase: dependency(),
       userLoginUsecase: dependency(),
       currentUserUsecase: dependency(),
+      currentUserCubit: dependency(),
     ));
 }

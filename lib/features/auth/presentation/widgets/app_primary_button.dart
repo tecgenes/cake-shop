@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-class AuthButton extends StatelessWidget {
+class AppPrimaryButton extends StatelessWidget {
   final String buttonText;
   final VoidCallback onPressed;
   final String? svgIconPath;
-  const AuthButton({
+
+  const AppPrimaryButton({
     super.key,
     required this.buttonText,
     required this.onPressed,

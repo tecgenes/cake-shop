@@ -1,7 +1,7 @@
 import 'package:cake_shop/core/contracts/auth_remote_datasource.dart';
+import 'package:cake_shop/core/entities/user_entity.dart';
 import 'package:cake_shop/core/errors/exceptions.dart';
 import 'package:cake_shop/core/errors/failures.dart';
-import 'package:cake_shop/features/auth/domain/entities/user_entity.dart';
 import 'package:cake_shop/features/auth/domain/repositories/auth_repository_interface.dart';
 import 'package:fpdart/fpdart.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';

@@ -1,6 +1,6 @@
 {
   "login" : {
-    "login" : "Login.",
+    "login" : "Login",
     "email" : "Email",
     "password" : "Password",
     "forget_password" : "Forget your password ?",
@@ -19,6 +19,13 @@
       "reset_password" : "Reset Password",
       "reset" : "Reset",
       "remember_my_password" : "I remembered my password ? "
+  },
+  "unauth" : {
+    "design_title" : "Custom Design On Dmaind",
+    "account_title" : "Access Account",
+    "design_description" : "To benefit from the special design service",
+    "account_descriprtion" : "To ensure access to the account easily",
+    "auth_requred" : "Please log in to your account or create a new account"
   },
   "home": {
     "home" : "Home",

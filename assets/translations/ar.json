@@ -1,6 +1,6 @@
 {
   "login" : {
-    "login" : "دخول.",
+    "login" : "دخول",
     "email" : "البريد الإلكتروني",
     "password" : "كلمة المرور",
     "forget_password" : "نسيت كلمة المرور ؟",
@@ -18,7 +18,13 @@
     "reset_password" : "إعادة تعيين كلمة المرور",
     "reset" : "إعادة تعيين",
     "remember_my_password" : "لقد تذكرت كلمة المرور ? "
-
+  },
+  "unauth" : {
+    "design_title" : "طلب تصميم خاص",
+    "account_title" : "الوصول للحساب",
+    "design_description" : "للإستفادة من خدمة التصميم الخاص",
+    "account_descriprtion" : "لضمان الوصول للحساب بكل سهولة",
+    "auth_requred" : "يُرجى تسجيل الدخول لحسابك أو إنشاء حساب جديد"
   },
   "home": {
     "home" : "الرئيسية",
